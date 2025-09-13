@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* box-sizing: border-box; */
+}
+body{
+    background-color: black;
+}
+/* Nav Bar */
+nav{
+    position: relative;
+    top: 20px;
+    height: 65px;
+    max-width: 70vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: white; */
+}
+nav img{
+    position: relative;
+    z-index: 1;
+}
+
+/* Main Image */
+.main{
+    background-image: url("assets/bg.jpg");
+    height: 80vh;
+    position: relative;
+    background-position: center center;
+    /* background-size: max(600px, 100vw);for zoom effect */
+    background-repeat: no-repeat;
+}
+.main .box{ /* Acts as a black film */
+    text-align: center;
+    height: 80vh;
+    width: 100%;
+    opacity: 0.52;
+    background-color: black;
+    position: absolute;
+    top:0;
+}
+
+/* Main image ke beech ka text */
+.main-text{
+    /* font-family: "Sansation", sans-serif; */
+    height: calc(100% - 111px); 
+    /* here the % is used so bcz its parent's height is set. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    gap: 23px;
+    padding: 23px;
+    text-align: center;
+}
+/* first span -- maybe div also */ 
+.main-text > :first-child{  /* Min text ke immediate first child par ye property laagu hogi */
+    font-weight: bolder;
+    font-size: 50px;
+}
+/* second span */
+.main-text > :nth-child(2){
+    font-weight: 600;
+    font-size: 24px;
+}
+/* line at the end of main image */
+.line{
+    height: 5px;
+    background-color: rgb(55, 55, 55);
+    position: relative;
+    z-index: 3;
+}
+.btn{
+    position: relative;
+    z-index: 1;
+    padding: 4px 8px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 4px;
+    color: white;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.red{
+    background-color: red;
+}
+.main-text .btn, input{
+    padding: 12px 16px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.main-text-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.transparent{
+    background-color: rgba(10, 10, 10, 0.4);
+    font-weight: 700;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+}
+.main-text input{
+    font-size: 12px;
+    padding: 16px 72px 16px 9px;
+    font-weight: 700;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Now the sections below the main image */
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 65vw;
+    margin: auto;
+    color: white;
+    position: relative;
+    gap: 20px;
+}
+.first > div{
+    padding: 40px;
+}
+.first > div :first-child{
+    font-weight: 900;
+    font-size: 30px;
+}
+.first > div :nth-child(2){
+    font-weight: 400;
+    font-size: 20px;
+}
+.section-image img{
+    width: 480px;
+    position: relative;
+    z-index: 2;
+}
+/* TO ADJUST VIDEO */
+.section-image .media-container {
+    position: relative;
+    width: 100%;
+}
+.media-container img{
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.section-image video {
+    position: absolute;
+    top: 20%; /* adjust as needed */
+    left: 13%; /* adjust as needed */
+    width: 73%;
+    z-index: 1;
+}
+
+/* FAQ Section */
+.faq{
+    color: white;
+}
+.faq h2{
+    text-align: center;
+    padding: 12px 0 0 0;
+    font-size: 28px;
+}
+.faq .box{
+    display: flex;
+    background-color: rgb(46, 46, 46);
+    width: 50vw;
+    margin: 12px auto;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.faq .box:hover{
+    transition: all 0.35s ease-out;
+    background-color: rgb(90, 90, 90);
+}
+
+/* Footer */
+footer{
+    color: white;
+    width: 60vw;
+    margin: auto;   
+}
+footer .que{
+    padding: 12px;
+}
+.footer-items a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+.footer-class{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+.footer-items{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 1300px){
+    /* body{
+        background-color: red;
+    } */
+    .first{
+        flex-wrap: wrap;
+    }
+    nav{
+        max-width: 90vw;
+    }
+    .main-text-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .faq .box{
+        width: 90vw;
+    }
+    .footer-class{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
